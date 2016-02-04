@@ -4,10 +4,10 @@
 
 Akhos is an online discussion community. Users can create topics on variety of interests and discuss them along side each other. 
 
-Built on MEAN stack and hosted on Heroku.
+An old project updated after original DB got corrupt. Patched up and put on GitHub. Built on MEAN stack and hosted on Heroku.
 
 ## Live Site
-[Akhos](www.akhos.co)
+[Akhos](http://akhos.co)
 
 ## Installation
 Download/clone the repo. Install and run MongoDB if you haven't already. Go to directory and type **npm install**, and then **npm start**. The site will be live on localhost:3000. 
@@ -18,4 +18,4 @@ For development, there are grunt tasks set up. Type **grunt watch** for any CSS 
 Find a bug or have a feature request? [Open an issue](https://github.com/evgenyo/akhos/issues/new). Try to be as specific as possible about the bug or the feature requested.
 
 ## License
-[MIT License](https://raw.githubusercontent.com/evgenyo/akhos/master/LICENSE)
+[MIT License](https://raw.githubusercontent.com/evgenyo/akhos/master/LICENSE.md)
