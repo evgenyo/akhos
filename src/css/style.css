@@ -271,6 +271,7 @@ body {
   width: 65%;
   height: 90%;
   overflow: auto;
+  overflow-x: hidden;
   padding: 0 4% 25px 3%;
 }
 .hub h2 {
@@ -299,13 +300,14 @@ body {
   position: relative;
 }
 .twig .options {
-  height: 100%;
+  height: 90%;
   border-right: 1px solid #d7d8da;
   border-left: 1px solid #d7d8da;
   overflow-x: auto;
   right: -21px;
   position: absolute;
   width: 100%;
+  padding-bottom: 30px;
 }
 .twig .options .selectedTab {
   background-color: #ffffff;
