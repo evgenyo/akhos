@@ -1,0 +1,721 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+;@import url(https://fonts.googleapis.com/css?family=Francois+One);
+.transition-short {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.transition-long {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+.blur-on {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+}
+.blur-off {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+}
+.h2-title {
+  color: #4e5255;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 1.75rem;
+}
+a,
+*[onclick],
+*[href] {
+  cursor: pointer;
+}
+ul,
+li {
+  list-style: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  background: #757f9a;
+  background: -moz-linear-gradient(145deg, #757f9a 40%, #b0bcd1 85%);
+  background: -webkit-linear-gradient(-65deg, #757f9a 40%, #b0bcd1 85%);
+  background: linear-gradient(145deg, #757f9a 40%, #b0bcd1 85%);
+  overflow: hidden;
+}
+.tree {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  max-height: 1440px;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(85, 86, 105, 0.8);
+  color: #82929f;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.tree .treehouse {
+  width: 100%;
+  height: 10%;
+  min-height: 109px;
+}
+.tree .treehouse .header {
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+  float: left;
+}
+.tree .treehouse .title {
+  width: 45.4%;
+  color: #0c0c0f;
+  font-size: 2rem;
+  font-family: 'Francois One', sans-serif;
+  font-variant: small-caps;
+  font-weight: bold;
+  padding: 1rem;
+  border: 1px solid #e6eaef;
+  border-bottom-color: #d7d8da;
+  background: #ffffff;
+  background: -webkit-linear-gradient(left, #00ffff 0%, #97fba0 25%, #97b1fb 50%, #00ffff 100%) repeat;
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -webkit-animation-name: masked-animation;
+  -webkit-animation-duration: 35s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+.tree .treehouse .title h4 {
+  color: black;
+  font-size: 4rem;
+}
+.tree .treehouse .score {
+  width: 54.6%;
+  border-bottom: 1px solid #e6eaef;
+  font-size: 1.10rem;
+}
+.tree .treehouse .score div {
+  float: right;
+  padding: 2rem;
+  margin-right: 35px;
+}
+.tree .treehouse .score div p {
+  font-size: 1.5rem;
+  color: #181b1f;
+}
+.tree .treehouse .score div a {
+  text-decoration: none;
+  color: #9299a0;
+  font-size: .8rem;
+}
+.tree .treehouse .score div a:hover {
+  color: #679bfb;
+}
+.tree .root {
+  width: 100%;
+  height: 100%;
+}
+.tree .root .branch {
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 16%;
+  height: 100%;
+  background-color: #e6eaef;
+}
+.tree .root .branch ul {
+  margin-top: 30%;
+}
+.tree .root .branch ul li {
+  width: 100%;
+  padding-bottom: 20%;
+  padding-left: 25%;
+  margin-bottom: 5%;
+}
+.tree .root .branch ul li a {
+  text-decoration: none;
+  color: #4e5255;
+}
+.tree .root .branch ul li:hover {
+  cursor: pointer;
+}
+.tree .root .branch .blankLink {
+  color: #9299a0 !important;
+}
+.tree .root .branch .selected::before {
+  content: "";
+  background-color: #02c386;
+  box-shadow: 2px 0 30px #02c386;
+  width: .5rem;
+  height: 1rem;
+  position: absolute;
+  left: 0;
+}
+.tree .root .branch .search {
+  width: 65%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: -moz-linear-gradient(#e6eaef 0%, #ffffff 100%);
+  background: -webkit-linear-gradient(#e6eaef 0%, #ffffff 100%);
+  background: linear-gradient(#e6eaef 0%, #ffffff 100%);
+}
+.tree .root .trunk.ng-enter,
+.tree .root .trunk.ng-leave {
+  transition: 0.1s ease-in-out all;
+}
+.tree .root .trunk.ng-enter {
+  opacity: 1;
+}
+.tree .root .trunk.ng-leave,
+.tree .root .trunk.ng-enter.ng-enter-active {
+  opacity: .9;
+}
+.tree .root .trunk.ng-leave.ng-leave-active {
+  opacity: 1;
+}
+.tree .root .trunk::before {
+  content: "";
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+  background-color: #e6eaef;
+  position: absolute;
+  z-index: -1;
+}
+.tree .root .trunk {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  display: inline-block;
+  position: relative;
+  width: 84%;
+  height: 100%;
+}
+.tree .root .trunk .trunk-stuff.ng-anchor {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+.tree .root .trunk .leaf {
+  float: left;
+  display: inline-block;
+  position: relative;
+  width: 65%;
+  height: 90%;
+  overflow: auto;
+  padding: 0 4% 25px 3%;
+}
+.hub h2 {
+  color: #4e5255;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 1.75rem;
+}
+.hub a {
+  text-decoration: none;
+  color: #679bfb;
+}
+.hub a:hover {
+  border-bottom: 1px solid #679bfb;
+}
+.hub p {
+  margin-top: 15px;
+}
+.twig {
+  float: left;
+  display: inline-block;
+  width: 35%;
+  height: 100%;
+  background-color: #e6eaef;
+  overflow: hidden;
+  position: relative;
+}
+.twig .options {
+  height: 100%;
+  border-right: 1px solid #d7d8da;
+  border-left: 1px solid #d7d8da;
+  overflow-x: auto;
+  right: -21px;
+  position: absolute;
+  width: 100%;
+}
+.twig .options .selectedTab {
+  background-color: #ffffff;
+  border-right: none;
+}
+.twig .options a {
+  color: #82929f;
+  text-decoration: none;
+}
+.twig .options a li {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 12%;
+  border-bottom: 1px solid #d7d8da;
+  position: relative;
+  border-right: 1px solid #d7d8da;
+}
+.twig .options a li .cover {
+  z-index: 5;
+  opacity: .6;
+  font-size: 1.25rem;
+  visibility: hidden;
+  text-transform: uppercase;
+  width: 100%;
+  height: 45%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: #b0bcd1;
+  color: #4e5255;
+  vertical-align: middle;
+  font-weight: bold;
+}
+.twig .options a li .cover h3 {
+  display: inline-block;
+}
+.twig .options a li .cover h4 {
+  display: inline-block;
+}
+.twig .options a li div {
+  display: block;
+}
+.twig .options a li .info h5 {
+  font-size: 1.2rem;
+  color: #4e5255;
+  padding-bottom: 3px;
+  display: inline-block;
+}
+.twig .options a li .info h6 {
+  font-size: .8rem;
+  color: #82929f;
+  display: inline-block;
+}
+.twig .options a li .info h6 .author {
+  color: #4e5255;
+}
+.twig .options a li .info p {
+  color: #679bfb;
+  margin-top: 2px;
+  font-size: .9rem;
+}
+.twig .options a li .stats {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.twig .options a li .stats p {
+  font-size: .8rem;
+  color: #9299a0;
+}
+.twig .options a:hover li .cover {
+  visibility: visible;
+}
+.twig .options a:hover li {
+  cursor: pointer;
+  border-right: none;
+}
+.leaf .posts {
+  position: relative;
+}
+.leaf .posts .post-popularity {
+  position: absolute;
+  right: 10%;
+  top: 0;
+  width: 15%;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #c4cbd2;
+}
+.leaf .posts .post-popularity div {
+  height: 100%;
+  width: 1px;
+  background-color: #e6eaef;
+}
+.leaf .posts .post-popularity section {
+  display: inline-block;
+}
+.leaf .posts .post-popularity section p {
+  display: inline-block;
+  font-size: 2rem;
+}
+.leaf .posts .post-popularity .post-approve :hover {
+  color: #02c386;
+  cursor: pointer;
+}
+.leaf .posts .post-popularity .post-disapprove :hover {
+  color: #ff7b6d;
+  cursor: pointer;
+}
+.leaf .posts .post-header {
+  display: inline-block;
+  margin-top: 10%;
+  width: 55%;
+}
+.leaf .posts .post-header p {
+  display: block;
+  font-size: .9rem;
+}
+.leaf .posts .post-header p .bold-p {
+  color: #737579;
+}
+.leaf .posts .post-header h2 {
+  color: #4e5255;
+  margin: 10px 0 15px;
+  font-size: 2.5rem;
+  display: block;
+}
+.leaf .posts .post-header a {
+  color: #679bfb;
+  text-decoration: none;
+}
+.leaf .posts .post-header a:hover {
+  border-bottom: 1px solid #679bfb;
+}
+.leaf .posts .post-comments {
+  margin-top: 75px;
+}
+.leaf .posts .post-comments div {
+  text-align: center;
+}
+.leaf .posts .post-comments div a {
+  text-decoration: none;
+  color: #679bfb;
+}
+.leaf .posts .post-comments div a:hover {
+  border-bottom: 1px solid #679bfb;
+}
+.leaf .posts .post-comments h3 {
+  color: #9299a0;
+}
+.leaf .posts .post-comments input {
+  width: 70%;
+  display: inline-block;
+  font-size: 1.10rem;
+  padding: 10px;
+  background-color: #f4f7f9;
+  outline: none;
+  border: none;
+}
+.leaf .posts .post-comments button {
+  background-color: #ffffff;
+  color: #679bfb;
+  padding: 1.5% 8% 1.5% 6%;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  border: 1px solid #679bfb;
+  margin-top: -1%;
+  margin-right: -7%;
+}
+.leaf .posts .post-comments button:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #679bfb;
+}
+.leaf .posts .divide-border {
+  background-color: #d7d8da;
+  width: 107%;
+  height: 1px;
+  margin-top: 75px;
+}
+.leaf .posts .all-comments {
+  margin-top: 30px;
+}
+.leaf .posts .all-comments section {
+  margin: 20px 0;
+  padding: 10px;
+}
+.leaf .posts .all-comments section:hover {
+  border-left: 2px solid #b0a4fd;
+}
+.leaf .posts .all-comments .comment-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: .85rem;
+  color: #9299a0;
+}
+.leaf .posts .all-comments .comment-header .bold-p {
+  color: #737579;
+}
+.leaf .posts .all-comments .comment-header .comment-popularity .fa {
+  margin: 0 10px;
+}
+.leaf .posts .all-comments .comment-header .comment-approve:hover {
+  color: #02c386;
+}
+.leaf .posts .all-comments .comment-header .comment-disapprove:hover {
+  color: #ff7b6d;
+}
+.leaf .posts .all-comments .comment-header .fa:hover {
+  cursor: pointer;
+}
+.leaf .posts .all-comments .comment-body {
+  margin-top: 8px;
+  color: #737579;
+}
+.leaf .new-topic h2 {
+  color: #4e5255;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 1.75rem;
+}
+.leaf .new-topic label {
+  width: 100%;
+  display: block;
+  font-size: 1.25rem;
+  color: #4e5255;
+  padding-bottom: 2%;
+  margin-top: 10%;
+}
+.leaf .new-topic input {
+  width: 95%;
+  font-size: 1.5rem;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: #e6eaef;
+}
+.leaf .new-topic select {
+  background-color: #e6eaef;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  display: block;
+}
+.leaf .new-topic button {
+  background-color: #ffffff;
+  color: #679bfb;
+  padding: 2% 8% 2% 6%;
+  font-size: 1.5rem;
+  float: right;
+  border: 1px solid #679bfb;
+  margin-top: 7%;
+  margin-right: -5%;
+}
+.leaf .new-topic button:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #679bfb;
+}
+.leaf .new-topic p {
+  font-size: 1.25rem;
+}
+.leaf .new-topic p a {
+  text-decoration: none;
+  color: #679bfb;
+}
+.leaf .new-topic p a:hover {
+  border-bottom: 1px solid #679bfb;
+}
+.leaf [class^="auth"] {
+  width: 100%;
+  padding: 0 10%;
+}
+.leaf [class^="auth"] h2 {
+  color: #4e5255;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 1.75rem;
+}
+.leaf [class^="auth"] label {
+  width: 100%;
+  display: block;
+  font-size: 1.25rem;
+  color: #4e5255;
+  padding-bottom: 2%;
+  margin-top: 10%;
+}
+.leaf [class^="auth"] input {
+  width: 95%;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  padding: 10px;
+  background-color: #f4f7f9;
+}
+.leaf [class^="auth"] div {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px;
+  color: #ff7b6d;
+}
+.leaf [class^="auth"] button {
+  background-color: #ffffff;
+  color: #9299a0;
+  padding: 2% 8% 2% 6%;
+  font-size: 1.5rem;
+  border: 1px solid #679bfb;
+  margin-top: 15%;
+  right: 0;
+  position: absolute;
+}
+.leaf [class^="auth"] button:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #679bfb;
+}
+.leaf {
+  overflow: auto;
+  position: absolute;
+  right: -20px;
+}
+.leaf .privacy {
+  right: 0;
+}
+.leaf .privacy p {
+  margin-top: 10px;
+}
+.leaf .privacy h2 {
+  color: #4e5255;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 1.75rem;
+}
+.leaf .privacy ul {
+  margin-left: 20px;
+}
+.leaf .privacy ul li {
+  list-style: square;
+  margin-top: 10px;
+}
+.leaf {
+  overflow: auto;
+  position: absolute;
+  right: -20px;
+}
+.leaf .terms {
+  right: 0;
+}
+.leaf .terms p {
+  margin-top: 10px;
+}
+.leaf .terms h2 {
+  color: #4e5255;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 1.75rem;
+}
+.leaf .terms ul {
+  margin-left: 20px;
+}
+.leaf .terms ul li {
+  list-style: square;
+  margin-top: 10px;
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 12px !important;
+  }
+  .treehouse {
+    height: 8% !important;
+    min-height: 87px !important;
+  }
+  [class^="auth"] input {
+    width: 80% !important;
+  }
+  .options li {
+    padding-right: 18% !important;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 8px !important;
+  }
+  .treehouse {
+    height: 5% !important;
+    min-height: 55px !important;
+  }
+  .post-popularity {
+    height: 50px !important;
+  }
+  .post-comments {
+    margin-top: 35px !important;
+  }
+  .divide-border {
+    margin-top: 25px !important;
+  }
+  [class^="auth"] input {
+    width: 80% !important;
+  }
+  .options li {
+    padding-right: 25% !important;
+  }
+}
