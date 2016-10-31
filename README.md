@@ -6,9 +6,6 @@ Akhos is an online discussion community. Users can create topics on variety of i
 
 An old project updated after original DB got corrupt. Patched up and put on GitHub. Built on MEAN stack and hosted on Heroku.
 
-## Live Site
-[Akhos](http://akhos.co)
-
 ## Installation
 Download/clone the repo. Install and run MongoDB if you haven't already. Go to directory and type **npm install**, and then **npm start**. The site will be live on localhost:3000. 
 
